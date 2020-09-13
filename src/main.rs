@@ -1,12 +1,12 @@
 fn main() {
     let boxed_vector: Box<Vec<u32>> = Box::new(vec![0; 100]);
-    let numbers_1_to_100: Vec<u32> = increment_all_elements_from_box_to_vec(boxed_vector);
+    let numbers_1_to_100: Vec<u32> = increment_all_elements(boxed_vector);
     for x in numbers_1_to_100 {
         fizz_buzz(x);
     }
 }
 
-fn increment_all_elements_from_box_to_vec (elements: Box<Vec<u32>>)-> Vec<u32>{
+fn increment_all_elements (elements: Box<Vec<u32>>)-> Vec<u32>{
     let mut count = 0;
     elements.into_iter().map(|x| {count+= 1; x + count}).collect()
 }
