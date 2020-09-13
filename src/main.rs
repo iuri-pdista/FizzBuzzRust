@@ -4,3 +4,21 @@ fn main() {
     }
 }
 
+fn fizz_buzz( num:u32 ){
+    if num == 0{
+        println!("{}\n", num);
+    }
+    else if is_fizz_buzz(num){
+        println!("FizzBuzz\n");
+    }
+    else if is_fizz(num){
+        println!("Fizz\n");
+    }
+    else if is_buzz(num){
+        println!("Buzz\n");
+    }
+    else{
+        println!("{}\n",num);
+    }
+}
+
