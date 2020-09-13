@@ -1,10 +1,9 @@
 fn main() {
     let boxed_vector: Box<Vec<u32>> = Box::new(vec![0; 100]);
     let numbers_1_to_100: Vec<u32> = increment_all_elements_from_box_to_vec(boxed_vector);
-    println!("{:?}", numbers_1_to_100);
-    // for x in 0..100{
-    //     fizz_buzz(x);
-    // }
+    for x in numbers_1_to_100 {
+        fizz_buzz(x);
+    }
 }
 
 fn increment_all_elements_from_box_to_vec (elements: Box<Vec<u32>>)-> Vec<u32>{
