@@ -38,3 +38,12 @@ fn is_fizz( num: u32 )->bool{
         false
     }
 }
+
+fn is_buzz( num: u32 ) -> bool{
+    if num % 5 == 0{
+        true
+    }
+    else{
+        false
+    }
+}
