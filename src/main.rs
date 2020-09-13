@@ -7,6 +7,11 @@ fn main() {
     // }
 }
 
+fn increment_all_elements_from_box_to_vec (elements: Box<Vec<u32>>)-> Vec<u32>{
+    let mut count = 0;
+    elements.into_iter().map(|x| {count+= 1; x + count}).collect()
+}
+
 fn fizz_buzz( num:u32 ){
     if num == 0{
         println!("{}\n", num);
