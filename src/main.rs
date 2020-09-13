@@ -1,7 +1,10 @@
 fn main() {
-    for x in 0..100{
-        fizz_buzz(x);
-    }
+    let boxed_vector: Box<Vec<u32>> = Box::new(vec![0; 100]);
+    let numbers_1_to_100: Vec<u32> = increment_all_elements_from_box_to_vec(boxed_vector);
+    println!("{:?}", numbers_1_to_100);
+    // for x in 0..100{
+    //     fizz_buzz(x);
+    // }
 }
 
 fn fizz_buzz( num:u32 ){
