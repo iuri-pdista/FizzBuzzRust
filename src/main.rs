@@ -22,3 +22,11 @@ fn fizz_buzz( num:u32 ){
     }
 }
 
+fn is_fizz_buzz( num: u32 ) -> bool{
+    if is_fizz(num) && is_buzz(num){
+        true
+    }
+    else{
+        false
+    }
+}
